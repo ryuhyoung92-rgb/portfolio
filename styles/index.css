@@ -1,0 +1,157 @@
+/* 스크롤 디자인 */
+/* Firefox */
+html {scrollbar-width: 10px;;scrollbar-color: #637627 #222;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}
+html::-o-scrollbar-thumb {background-color: #637627;border-radius: 5px;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+::-webkit-scrollbar-thumb {background-color: #637627;border-radius: 5px;}
+/* 모바일 기준 w440 */
+html {scroll-behavior:smooth;}/* 스크롤 애니메이션 효과 */
+body {background-color: #222;}
+#wrap {
+    width:440px; /* 디자인 기준 크기(iphone 17promax) */
+    min-width:320px; /* 최소 제한 너비(고정) */
+    max-width:440px; /* 최대 제한 너비(디자인에 따라 다름) */
+    box-shadow:0 10px 10px rgba(0,0,0,0.3);
+    background-color: #fff;
+    margin:0 auto;
+    overflow-x:hidden;
+    height:100vh;
+}
+/* =========================================================================1. intro */
+#wrap .intro {
+    height:100vh;
+    background:linear-gradient(155deg, #EDFFB3, #637627);
+    display:flex; flex-flow:row nowrap;
+    justify-content:center; align-items:center;
+}
+#wrap .intro h1 {}
+#wrap .intro h1 span {
+    display:block; text-align:center;
+    color: #fff;
+}
+/* #wrap .intro h1 span:nth-child(1),
+#wrap .intro h1 span:nth-child(2) {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+    line-height: 1.3;
+}
+#wrap .intro h1 span:nth-child(1) {font-size: 1.25rem;}
+#wrap .intro h1 span:nth-child(2) {font-size: 1.5rem; margin-bottom:10px;} */
+#wrap .intro img {margin-bottom:10px;}
+#wrap .intro h1 .name {font-size:2.5rem; font-weight:700;}
+/* =========================================================================2. info */
+#wrap .info {
+    height:100vh; display:flex;
+    flex-flow:column nowrap; justify-content:center;
+    align-items:center;
+}
+#wrap .info .photo {
+    width:196px; height:220px; border-radius:10px;
+    background-color: aqua;
+}
+#wrap .info .photo img {width:100%;}
+#wrap .info .me {
+    display:flex; flex-flow:row wrap;
+    justify-content:space-around;
+    padding:20px 0;
+}
+#wrap .info .me li {
+    font-size:0.88rem;
+    width:100%; text-align:center;
+    margin-bottom:10px;
+}
+#wrap .info .me li:nth-child(1) {text-align:right; width:40%;}
+#wrap .info .me li:nth-child(2) {text-align:left; width:45%;}
+#wrap .info .me li:last-child {margin-bottom:0;}
+#wrap .info .me li a {}
+#wrap .info h2 {font-weight:600; font-size:1.25rem; margin-bottom:24px;}
+#wrap .info .skill_list {
+    display:flex; flex-flow:row wrap;
+    justify-content:center; gap:12px;
+    padding:0 30px;
+}
+#wrap .info .skill_list p {
+    width:calc(100% / 6); margin-bottom:12px;
+}
+#wrap .info .skill_list p img {width:100%}
+/* =========================================================================3. project */
+#wrap .project_wrap {}
+#wrap .project_wrap h1 {font-size: 1.25rem; text-align:center;}
+/* =========================================================================3. 공통 프로텍트 선택자 */
+#wrap .project_wrap .project {
+    margin:30px auto 30px; width:calc(100% - 30px);
+}
+#wrap .project_wrap .project h2 {
+    font-weight:600; font-size:1.25rem; margin-bottom:10px;
+}
+#wrap .project_wrap .project h2 span {font-weight:700;}
+#wrap .project_wrap .project .mockup {
+    overflow:hidden; height:350px;
+    position: relative;
+}
+#wrap .project_wrap .project .mockup img {
+    position:absolute; left:50%; transform:translateX(-50%);
+    height:100%;
+}
+#wrap .project_wrap .project .project_info {
+    padding:30px 0;
+}
+#wrap .project_wrap .project .project_info li::before {
+    content:''; display:block;
+    width:4px; height:4px; margin-right:10px;
+    background:#222; border-radius:50%;
+    position:absolute; left:-10px; top:50%; transform:translateY(-50%);
+}
+/* #wrap .project_wrap .project .project_info li:nth-child(3)::before {
+    top:20%;
+} 줄바꿈으로 점(before)의 위치가 바뀌었을때 조절해줄 수 있는 태그 */
+#wrap .project_wrap .project .project_info li {
+    font-size:0.88rem; line-height:1.7; text-align:left;
+    position:relative; margin-left:10px;
+}
+#wrap .project_wrap .project .plan {
+    font-size:0.88rem; line-height:1.7; margin-bottom:30px;
+}
+#wrap .project_wrap .project .link {
+    display:flex; flex-flow:row nowrap;
+    justify-content:center; gap:8px;
+}
+#wrap .project_wrap .project .link a {
+    padding:10px 20px; border-radius:5px;
+    font-weight:600;
+}
+#wrap .project_wrap .project .link .proposal {
+    background-color:#637627;
+    color:#fff; 
+}
+#wrap .project_wrap .project .link .proposal:hover {
+    background-color:#222;
+    color:#fff; transition:0.5s;
+}
+#wrap .project_wrap .project .link .prototype {
+    background-color:#C5DF6D;
+    color:#637627;
+}
+#wrap .project_wrap .project .link .prototype:hover {
+    background-color:#222;
+    color:#fff; transition:0.5s;
+}
+/* =========================================================================3. 개별 프로텍트 선택자 */
+#wrap .project_wrap .project1 {}
+#wrap .project_wrap .project1 h2 {}
+#wrap .project_wrap .project1 h2 span {}
+#wrap .project_wrap .project1 .mockup {}
+#wrap .project_wrap .project1 .mockup img {}
+#wrap .project_wrap .project1 .info {}
+#wrap .project_wrap .project1 .info li {}
+#wrap .project_wrap .project1 .plan {}
+#wrap .project_wrap .project1 .link {}
+#wrap .project_wrap .project1 .link a {}
+#wrap .project_wrap .project1 .link .proposal {}
+#wrap .project_wrap .project1 .link .prototype {}
