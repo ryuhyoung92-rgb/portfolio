@@ -1,0 +1,89 @@
+/* responsive.css */
+@media screen and (min-width:600px){
+    /* 1행 글자크기, 여백 등 */
+    #wrap .intro h1 span:nth-child(1) {font-size: 1.75rem;}
+    #wrap .intro h1 span:nth-child(2) {font-size: 2rem; margin-bottom:20px;}
+    #wrap .intro h1 .name {font-size:3.13rem;}
+    /* 2행 프로필 */
+    #wrap .info .details dl:nth-child(1) dd:before,
+    #wrap .info .details dl:last-child dd:nth-child(4):before,
+    #wrap .info .details dl:last-child dd:nth-child(5):before,
+    #wrap .info .details dl:last-child dd:nth-child(6):before,
+    #wrap .info .details dl:last-child dd:nth-child(7):before {top:25%;}
+    /* 3행 프로젝트 이미지 w100% */
+    #wrap .project_wrap h1 {font-size: 1.75rem;}
+    #wrap .project_wrap .project .title_thum .mockup img {
+        height: auto; /* 100 덮어쓰기값으로 auto 변경 */
+        width:100%;
+    }
+    /* 4행 그래픽 이미지 확대 */
+    #wrap .project_wrap .graphic_wrap .graphic_container a {
+        width:246px; height:400px;
+    }
+} /* 사용자가 보는 기기 너비가 600보다 크면 */
+@media screen and (min-width:840px){
+    /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
+    #wrap .info {
+        height:auto; display:flex; flex-flow:row nowrap;
+        justify-content:center;
+        align-items:flex-start;
+        padding:122px 0; gap:80px;
+    }
+    #wrap .info .profile .photo {
+        width:360px; height:360px; border-radius:20px;
+        margin-bottom:35px;
+    }
+    #wrap .info .profile .me li {font-size:1rem; line-height:1.5;}
+    #wrap .info .profile .me li:last-child {margin-bottom:35px;}
+    #wrap .info .profile .skill_list p {max-width:70px;}
+    #wrap .info .details {display:block;}
+    /* 3행 web -> 1행 2열 레이아웃 구조 변경 */
+    #wrap .project_wrap .project {
+        display:flex; flex-flow:row nowrap; width:100%;
+        justify-content:space-between; align-items:flex-end; gap:30px;
+    }
+    #wrap .project_wrap .project .title_thum {flex:2;}
+    #wrap .project_wrap .project .details {flex:1;}
+    #wrap .project_wrap .project .details .link {justify-content:flex-start;}
+    #wrap .project_wrap .project .title_thum h2 {font-size:1.75rem; margin:0 0 16px;}
+    #wrap .project_wrap .project .details .project_info li:nth-child(2)::before,
+    #wrap .project_wrap .project .details .project_info li:nth-child(3)::before {
+    top:20%;}
+    #wrap .project_wrap .project .title_thum .mockup {height:600px; overflow: hidden;}
+    #wrap .project_wrap .project .title_thum .mockup img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    /* 4행 그래픽 이미지 확대 */
+} /* 사용자가 보는 기기 너비가 840보다 크면 */
+@media screen and (min-width:865px){
+    /* 2행 */
+    #wrap .info .details dl:last-child dd:nth-child(6):before {top:50%;}
+}/* 사용자가 보는 기기 너비가 865보다 크면 */
+@media screen and (min-width:930px){
+    /* 2행 */
+    #wrap .info .details dl:last-child dd:nth-child(7):before {top:50%;}
+}/* 사용자가 보는 기기 너비가 930보다 크면 */
+@media screen and (min-width:990px){
+    /* 3행 */
+    #wrap .project_wrap .project .details .project_info li:nth-child(2)::before {
+    top:50%;}
+}/* 사용자가 보는 기기 너비가 1080보다 크면 */
+@media screen and (min-width:1025px){
+    /* 2행 */
+    #wrap .info .details dl:last-child dd:nth-child(4):before {top:50%;}
+}/* 사용자가 보는 기기 너비가 1025보다 크면 */
+@media screen and (min-width:1042px){
+    /* 2행 */
+    #wrap .info .details dl:nth-child(1) dd:before {top:50%;}
+}/* 사용자가 보는 기기 너비가 1042보다 크면 */
+@media screen and (min-width:1188px){
+    /* 3행 */
+    #wrap .project_wrap .project .details .project_info li:nth-child(3)::before {
+    top:50%;}
+}/* 사용자가 보는 기기 너비가 1188보다 크면 */
+@media screen and (min-width:1247px){
+    /* 2행 */
+    #wrap .info .details dl:last-child dd:nth-child(5):before {top:50%;}
+}/* 사용자가 보는 기기 너비가 1247보다 크면 */
